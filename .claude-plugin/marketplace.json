@@ -1,0 +1,16 @@
+{
+  "name": "dexi",
+  "description": "Official Claude Code plugin marketplace for Dexi (dexi.net)",
+  "owner": {
+    "name": "Dexi",
+    "email": "team@dexi.net",
+    "url": "https://dexi.net"
+  },
+  "plugins": [
+    {
+      "name": "dexi",
+      "source": "./",
+      "description": "Connect Claude Code to your Dexi notes: search and capture knowledge mid-session, and run spaced-repetition reviews in the terminal"
+    }
+  ]
+}

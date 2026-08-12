@@ -1,0 +1,14 @@
+{
+  "name": "dexi",
+  "displayName": "Dexi",
+  "description": "Connect Claude Code to your Dexi notes: search and capture knowledge mid-session, and run spaced-repetition reviews in the terminal",
+  "version": "1.0.0",
+  "author": {
+    "name": "Dexi",
+    "email": "team@dexi.net",
+    "url": "https://dexi.net"
+  },
+  "homepage": "https://docs.dexi.net/mcp/overview",
+  "repository": "https://github.com/dexi/claude-plugin",
+  "keywords": ["notes", "knowledge-base", "note-taking", "mcp", "spaced-repetition", "bookmarks", "second-brain"]
+}
