@@ -1,5 +1,5 @@
 ---
-description: Run a Dexi spaced-repetition review session in the terminal — quiz the user on their due cards and record the grades
+description: Run a Dexi spaced-repetition review session — quiz the user on their due cards and record the grades
 disable-model-invocation: true
 ---
 

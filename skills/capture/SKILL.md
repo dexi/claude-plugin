@@ -8,7 +8,7 @@ Save the current finding, decision, or content the user pointed at as a Dexi not
 
 How to write the note:
 
-1. **Distill, don't dump.** A note should be the useful conclusion, not a transcript. For a debugging finding: the symptom, root cause, and fix. For a decision: what was decided and why. Short code snippets are fine when they're the point; never paste hundreds of lines.
+1. **Distill, don't dump.** A note should be the useful conclusion, not a transcript. For a debugging finding: the symptom, root cause, and fix. For a decision: what was decided and why. For research or a meeting: the takeaways, not the play-by-play. Short excerpts or code snippets are fine when they're the point; never paste pages of material.
 2. **Title**: a short, specific noun phrase the user could find again later (e.g. "Railway healthchecks probe PORT, not the domain target port").
 3. **Tags**: write 1–3 relevant `#hashtags` inline in the body — Dexi parses them into tags automatically. Reuse the user's existing vocabulary when known (call `list_tags` if unsure rather than inventing near-duplicates).
 4. **Body**: plain text. `[[Wiki Links]]` to related note titles are supported and encouraged when you know a related note exists.

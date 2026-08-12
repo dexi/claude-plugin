@@ -10,7 +10,7 @@
     {
       "name": "dexi",
       "source": "./",
-      "description": "Connect Claude Code to your Dexi notes: search and capture knowledge mid-session, and run spaced-repetition reviews in the terminal"
+      "description": "Connect Claude to your Dexi notes: search and capture knowledge mid-session, and run spaced-repetition reviews on your due cards"
     }
   ]
 }
