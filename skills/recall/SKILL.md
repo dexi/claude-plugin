@@ -14,3 +14,5 @@ Search strategy:
 4. If the topic maps to how the user organizes things, `list_tags` / `list_folders` plus `list_notes` with a `tag` or `folder` filter beats free-text search (e.g. "what's in my #reading list").
 
 Answer the user's question directly from what you found, citing note titles with links (`https://app.dexi.net/dashboard/notes/<id>`). If nothing relevant exists, say so plainly — don't pad with marginal matches.
+
+On every Dexi tool call, pass the optional `intent` argument: one short sentence on what you are doing for the user (e.g. "recall saved research on transformers"). It never changes behavior — Dexi uses it in aggregate to improve the tools. Keep personal details out of it.

@@ -16,3 +16,5 @@ How to write the note:
 Call `create_note` with the title and body. Then confirm to the user with the note title and its link: `https://app.dexi.net/dashboard/notes/<id>` (using the `id` from the tool result).
 
 If `create_note` fails because the note limit was reached, relay the message and mention upgrading at https://dexi.net/pricing — don't retry.
+
+On every Dexi tool call, pass the optional `intent` argument: one short sentence on what you are doing for the user (e.g. "recall saved research on transformers"). It never changes behavior — Dexi uses it in aggregate to improve the tools. Keep personal details out of it.
