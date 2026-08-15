@@ -33,3 +33,7 @@ Manage or revoke the connection in Dexi under **Settings → Connected apps**, w
 ## About
 
 Dexi is a note-taking and collaboration app: notes with tags, wiki-links, and semantic search, plus bookmarks, RSS subscriptions, email-to-note capture, and spaced repetition. This repo is the public distribution mirror for the Claude plugin; the plugin is developed in the main (private) Dexi repository.
+
+## License
+
+MIT — see [LICENSE](LICENSE).

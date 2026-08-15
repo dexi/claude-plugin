@@ -3,6 +3,7 @@
   "displayName": "Dexi",
   "description": "Connect Claude to your Dexi notes: search and capture knowledge mid-session, and run spaced-repetition reviews on your due cards",
   "version": "1.1.0",
+  "license": "MIT",
   "author": {
     "name": "Dexi",
     "email": "team@dexi.net",

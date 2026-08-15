@@ -9,7 +9,7 @@ Find what the user has saved in Dexi about a topic using the Dexi MCP tools. If 
 Search strategy:
 
 1. Run `search_notes` (keyword/full-text) and `semantic_search` (conceptual similarity) — they surface different results, so for anything non-trivial run both. Dexi notes back everything: typed notes, bookmarks, emailed-in messages, and RSS feed entries all come back from the same search.
-2. Search results return snippets. Call `get_note` for the full body of the notes that actually matter before answering — don't conclude from snippets alone.
+2. Search results return snippets by default. Don't conclude from snippets alone: pass `full_text: true` (bodies inline, up to 10 results) when several look relevant, or call `get_note` for one note that matters.
 3. When one note is clearly central, `find_similar` on its id is a cheap way to pull in related notes the queries missed.
 4. If the topic maps to how the user organizes things, `list_tags` / `list_folders` plus `list_notes` with a `tag` or `folder` filter beats free-text search (e.g. "what's in my #reading list").
 
