@@ -12,6 +12,7 @@ Search strategy:
 2. Search results return snippets by default. Don't conclude from snippets alone: pass `full_text: true` (bodies inline, up to 10 results) when several look relevant, or call `get_note` for one note that matters.
 3. When one note is clearly central, `find_similar` on its id is a cheap way to pull in related notes the queries missed.
 4. If the topic maps to how the user organizes things, `list_tags` / `list_folders` plus `list_notes` with a `tag` or `folder` filter beats free-text search (e.g. "what's in my #reading list").
+5. If the user has saved a base for it (`list_bases`), `query_base` runs their own filter and sort — "show me my reading list", "what's due this week" — and returns each note's `key:: value` properties. Prefer it over re-deriving the filter yourself.
 
 Answer the user's question directly from what you found, citing note titles with links (`https://app.dexi.net/dashboard/notes/<id>`). If nothing relevant exists, say so plainly — don't pad with marginal matches.
 
