@@ -2,7 +2,7 @@
   "name": "dexi",
   "displayName": "Dexi",
   "description": "Connect Claude to your Dexi notes: search and capture knowledge mid-session, and run spaced-repetition reviews on your due cards",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "license": "MIT",
   "author": {
     "name": "Dexi",
@@ -11,5 +11,13 @@
   },
   "homepage": "https://docs.dexi.net/mcp/overview",
   "repository": "https://github.com/dexi/claude-plugin",
-  "keywords": ["notes", "knowledge-base", "note-taking", "mcp", "spaced-repetition", "bookmarks", "second-brain"]
+  "keywords": [
+    "notes",
+    "knowledge-base",
+    "note-taking",
+    "mcp",
+    "spaced-repetition",
+    "bookmarks",
+    "second-brain"
+  ]
 }
