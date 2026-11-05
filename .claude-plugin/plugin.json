@@ -1,8 +1,8 @@
 {
   "name": "dexi",
   "displayName": "Dexi",
-  "description": "Connect Claude to your Dexi notes: search and capture knowledge mid-session, and run spaced-repetition reviews on your due cards",
-  "version": "1.2.1",
+  "description": "Connect Claude to your Dexi notes: shared memory across assistants, search and capture knowledge mid-session, and spaced-repetition reviews on your due cards",
+  "version": "1.3.0",
   "license": "MIT",
   "author": {
     "name": "Dexi",
@@ -10,6 +10,7 @@
     "url": "https://dexi.net"
   },
   "homepage": "https://docs.dexi.net/mcp/overview",
+  "privacyPolicyUrl": "https://dexi.net/privacy",
   "repository": "https://github.com/dexi/claude-plugin",
   "keywords": [
     "notes",
@@ -19,5 +20,27 @@
     "spaced-repetition",
     "bookmarks",
     "second-brain"
-  ]
+  ],
+  "userConfig": {
+    "recall": {
+      "type": "boolean",
+      "title": "Memory recall at session start",
+      "description": "Tell Claude at the start of each session that Dexi is your shared memory for the project, so it checks for prior decisions and saves new ones",
+      "default": true
+    },
+    "checkpoints": {
+      "type": "boolean",
+      "title": "Save checkpoints",
+      "description": "After a long run of tool calls with nothing saved to Dexi, ask Claude once to save any decision worth keeping",
+      "default": false
+    },
+    "checkpoint_every": {
+      "type": "number",
+      "title": "Checkpoint interval",
+      "description": "Tool calls between save checkpoints (when checkpoints are on)",
+      "default": 20,
+      "min": 5,
+      "max": 200
+    }
+  }
 }

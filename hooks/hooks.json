@@ -1,0 +1,28 @@
+{
+  "description": "Dexi memory: recall instructions at session start; opt-in save checkpoints at Stop",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "command -v python3 >/dev/null 2>&1 && python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/dexi_hooks.py\" session-start || true",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "command -v python3 >/dev/null 2>&1 && python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/dexi_hooks.py\" stop || true",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
