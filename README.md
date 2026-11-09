@@ -1,6 +1,6 @@
 # Dexi plugin for Claude Code and Claude Cowork
 
-Connects Claude to your [Dexi](https://dexi.net) notes via the Dexi MCP server (`https://mcp.dexi.net/mcp`). On first use, Dexi's OAuth consent page opens in your browser — sign in, choose what the connection can access (everything, or a single folder/tag), and you're connected.
+Connects Claude to your [Dexi](https://dexi.net) notes via the Dexi MCP server (`https://mcp.dexi.net/mcp`). On first use, Dexi's OAuth consent page opens in your browser — sign in, choose what the connection can access (everything, or a single folder/tag), and you're connected. The notes are the same ones ChatGPT, Gemini and any other MCP client you connect read and write, so Claude shares one memory with them.
 
 ## Install
 
