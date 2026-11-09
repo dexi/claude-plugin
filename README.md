@@ -30,7 +30,7 @@ claude --plugin-dir ./claude-plugin
 
 The plugin ships two hooks (`hooks/hooks.json`, `hooks/dexi_hooks.py`; they need `python3` on your `PATH` and do nothing without it):
 
-- **Recall at session start** (on by default): tells Claude that Dexi is your shared memory across assistants for the current project (the git repository's name). Claude is asked to check Dexi before substantive work and to save settled decisions, tagged `#memory` plus a project tag.
+- **Recall at session start** (on by default): tells Claude that Dexi is your shared memory across assistants for the current project (the git repository's name). Claude is asked to check Dexi before substantive work and to save settled decisions, tagged `#memory` plus a project tag. `#memory` is also the tag the Hermes and OpenClaw plugins put on their session digests, so one tag covers every agent's memory ([Switching agents](https://docs.dexi.net/mcp/shared-memory#switching-agents)).
 - **Save checkpoints** (off by default): after a run of tool calls with nothing saved to Dexi (20 by default), asks Claude once to save any decision worth keeping.
 
 Change them in `/config` under the Dexi plugin's options (`recall`, `checkpoints`, `checkpoint_every`). Tests: `python3 -m pytest hooks/tests`.
