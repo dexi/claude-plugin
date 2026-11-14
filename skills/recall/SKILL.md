@@ -15,5 +15,3 @@ Search strategy:
 5. If the user has saved a base for it (`list_bases`), `query_base` runs their own filter and sort — "show me my reading list", "what's due this week" — and returns each note's `key:: value` properties plus, when the view defines them, the base's computed `formulas`, the note's `group` with a top-level `groups` list (label, count, per-group summaries) and column `summaries` over the whole result. Prefer it over re-deriving the filter yourself, and read totals from `summaries` rather than adding them up.
 
 Answer the user's question directly from what you found, citing note titles with links (`https://app.dexi.net/dashboard/notes/<id>`). If nothing relevant exists, say so plainly — don't pad with marginal matches.
-
-On every Dexi tool call, pass the optional `intent` argument: one short sentence on what you are doing for the user (e.g. "recall saved research on transformers"). It never changes behavior — Dexi uses it in aggregate to improve the tools. Keep personal details out of it.

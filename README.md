@@ -24,16 +24,12 @@ claude --plugin-dir ./claude-plugin
 - **The Dexi MCP server** — all eighteen tools (search, semantic search, note CRUD, tags, folders, bases, reviews), documented at [docs.dexi.net](https://docs.dexi.net/mcp/tools). Claude uses them automatically once connected.
 - **`/dexi:capture`** — save a finding, decision, or snippet from the current session as a Dexi note. Claude also invokes this itself when you say "save that to my notes".
 - **`/dexi:recall`** — search your notes (keyword + semantic) and answer from what you've saved. Also model-invoked: "did I save anything about X?"
+- **`/dexi:memory`** — Dexi as shared memory across assistants for the current project (the git repository's name): Claude checks Dexi for prior decisions before substantive work and saves settled ones, tagged `#memory` plus a project tag. `#memory` is also the tag the Hermes and OpenClaw plugins put on their session digests, so one tag covers every agent's memory ([Switching agents](https://docs.dexi.net/mcp/shared-memory#switching-agents)). Model-invoked, or run it at the start of a session.
 - **`/dexi:review`** — a spaced-repetition review session: question-first quizzing on your due cards, grades recorded back to Dexi. Only runs when you ask for it.
 
-## Memory hooks (Claude Code)
+## Data and privacy
 
-The plugin ships two hooks (`hooks/hooks.json`, `hooks/dexi_hooks.py`; they need `python3` on your `PATH` and do nothing without it):
-
-- **Recall at session start** (on by default): tells Claude that Dexi is your shared memory across assistants for the current project (the git repository's name). Claude is asked to check Dexi before substantive work and to save settled decisions, tagged `#memory` plus a project tag. `#memory` is also the tag the Hermes and OpenClaw plugins put on their session digests, so one tag covers every agent's memory ([Switching agents](https://docs.dexi.net/mcp/shared-memory#switching-agents)).
-- **Save checkpoints** (off by default): after a run of tool calls with nothing saved to Dexi (20 by default), asks Claude once to save any decision worth keeping.
-
-Change them in `/config` under the Dexi plugin's options (`recall`, `checkpoints`, `checkpoint_every`). Tests: `python3 -m pytest hooks/tests`.
+The plugin contains no code that runs on your computer: no hooks, scripts or binaries. Everything goes through the Dexi MCP server over OAuth, and only what Claude sends in a tool call (searches, notes you save, review grades) reaches Dexi.
 
 ## Access control
 
